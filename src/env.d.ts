@@ -1,5 +1,5 @@
 interface ImportMetaEnv {
-  readonly url: string;
+  readonly url_back: string;
   // Agrega aquí otras variables de entorno que uses
 }
 

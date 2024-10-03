@@ -11,7 +11,7 @@ export abstract class ApiService<T> {
   protected endpoint: string;
 
   constructor(endpoint: string) {
-    this.baseUrl = import.meta.env.url;
+    this.baseUrl = import.meta.env.url_back;
     console.log('Base URL:', this.baseUrl);
     this.endpoint = endpoint;
   }
