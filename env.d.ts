@@ -3,3 +3,4 @@ declare var process: {
     URL_BACK: string;
   }
 };
+declare var process: any;
