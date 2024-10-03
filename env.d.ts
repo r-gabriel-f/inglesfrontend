@@ -1,6 +1,5 @@
-declare var process: {
-  env: {
+declare namespace NodeJS {
+  interface ProcessEnv {
     URL_BACK: string;
   }
-};
-declare var process: any;
+}

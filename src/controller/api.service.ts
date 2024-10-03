@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import axios, { AxiosResponse } from 'axios';
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from '../environment.prod';
+import { environment } from '../environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,6 @@ export abstract class ApiService<T> {
 
   constructor(endpoint: string) {
     this.baseUrl = environment.url;
-    console.log('Base URL:', this.baseUrl);
     this.endpoint = endpoint;
   }
 
