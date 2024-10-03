@@ -1,1 +1,45 @@
-<p>verbos works!</p>
+<div class="card">
+  <p-table
+    #dt2
+    [value]="dataverbs"
+    styleClass="p-datatable-gridlines"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    [globalFilterFields]="[
+      'espanol',
+    ]"
+    [scrollable]="true"
+    scrollHeight="75vh"
+  >
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <p-iconField iconPosition="left" class="ml-auto">
+          <p-inputIcon>
+            <i class="pi pi-search"></i>
+          </p-inputIcon>
+          <input
+            pInputText
+            type="text"
+            (input)="onSearch($event)"
+            placeholder="Search name"
+          />
+        </p-iconField>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Espanol</th>
+        <th>Infinitive</th>
+        <th>Past Simple</th>
+        <th>Participio</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+      <tr>
+        <td>{{ product.espanol }}</td>
+        <td>{{ product.infinitivo }}</td>
+        <td>{{ product.past_simple }}</td>
+        <td>{{ product.participio }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
