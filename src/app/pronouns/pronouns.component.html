@@ -10,10 +10,10 @@
     <tr [ttRow]="rowNode">
       <td>
         <p-treeTableToggler [rowNode]="rowNode" />
-        {{ rowData.title || rowData.verb }}
+        {{ rowData.title }}
       </td>
-      <td>{{ rowData.ingles }}</td>
-      <td>{{ rowData.espanol }}</td>
+      <td>{{ rowData.ingles || rowData.word }}</td>
+      <td>{{ rowData.espanol || rowData.meaning }}</td>
     </tr>
   </ng-template>
 </p-treeTable>
